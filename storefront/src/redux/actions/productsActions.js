@@ -1,6 +1,6 @@
 
 //create 3 actions for the ActionTypes created in ActionTypes.js
-import { ActionTypes } from "../contents/actionTypes";
+import { ActionTypes } from "../constants/actionTypes";
 
 export const setProducts = (products) => {
   //actions always returns an object with key:value pairs
