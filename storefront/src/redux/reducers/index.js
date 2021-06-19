@@ -1,4 +1,4 @@
-// in the index.js we mport and combine all the reducers fromproductReducers.js
+// in the index.js we mport and combine all the reducers from productReducers.js
 
 import { combineReducers } from 'redux';
 import { productsReducer } from './productReducers';

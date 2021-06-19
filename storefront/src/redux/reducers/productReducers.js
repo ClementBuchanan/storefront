@@ -1,5 +1,5 @@
 import { Category } from '@material-ui/icons';
-import { ActionTypes } from '../contents/actionTypes';
+import { ActionTypes } from '../constants/actionTypes';
 
 const initialState = {
   products: [
@@ -24,8 +24,10 @@ export const selectedProductReducer = (state = {}, { type, payload }) => {
   console.log(type);
   switch (type) {
     case ActionTypes.SELECTED_PRODUCT:
-      return {}
+      return { ...state, ...payload }
+    case ActionTypes.REMOVE_SELECTED_PRODUCT:
+      return {};
     default:
       return state;
-  };
-}
+  }
+};
