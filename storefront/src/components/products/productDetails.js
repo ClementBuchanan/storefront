@@ -5,10 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   selectedProduct,
   removeSelectedProduct,
-} from "../redux/actions/productsActions";
+} from "../../redux/actions/productsActions";
 const ProductDetails = () => {
   const { productId } = useParams();
-  let product = useSelector((state) => state.product);
+  let product = useSelector((state) => state.allProducts);
   const { image, title, price, category, description } = product;
   const dispatch = useDispatch();
   const fetchProductDetail = async (id) => {
