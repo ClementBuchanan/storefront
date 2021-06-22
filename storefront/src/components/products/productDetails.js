@@ -4,11 +4,11 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectedProduct,
-  removeSelectedProducts,
+  removeSelectedProduct,
 } from "../../redux/actions/productsActions";
 const ProductDetails = () => {
   const { productId } = useParams();
-  let product = useSelector((state) => state.product);
+  let product = useSelector((state) => state.allProducts);
   const { image, title, price, category, description } = product;
   const dispatch = useDispatch();
   const fetchProductDetail = async (id) => {
@@ -23,7 +23,7 @@ const ProductDetails = () => {
   useEffect(() => {
     if (productId && productId !== "") fetchProductDetail(productId);
     return () => {
-      dispatch(removeSelectedProducts());
+      dispatch(removeSelectedProduct());
     };
   }, [productId]);
   return (
