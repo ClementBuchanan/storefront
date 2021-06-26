@@ -36,12 +36,12 @@ const ProductDetails = () => {
             <div className="ui vertical divider">AND</div>
             <div className="middle aligned row">
               <div className="column lp">
-                <img className="ui fluid image" src={image} />
+                <img alt='' className="ui fluid image" src={image} />
               </div>
               <div className="column rp">
                 <h1>{title}</h1>
                 <h2>
-                  <a className="ui teal tag label">${price}</a>
+                  <div className="ui teal tag label">${price}</div>
                 </h2>
                 <h3 className="ui brown block header">{category}</h3>
                 <p>{description}</p>
